@@ -7,7 +7,10 @@ import PageAccueil from './Components/PageAccueil/PageAccueil';
 import Connexion from './Components/Connexion/Connexion';
 import HeaderSansConnexion from './Components/HeaderSansConnexion/HeaderSansConnexion';
 import InscriptionPopUp from './Components/Inscription/Inscription';
+import PremiereConnexion from './Components/PremiereConnexion/PremiereConnexion';
+import PolitiqueConfidentialite from './Components/PolitiqueConfidentialite/PolitiqueConfidentialite';
 import Posts from './Components/Posts/Posts';
+import ConditionUtilisation from './Components/ConditionUtilisation/ConditionUtilisation';
 
 
 export default function App() {
@@ -17,8 +20,9 @@ export default function App() {
     <Route path="/connexion" element={[<HeaderSansConnexion/>, <Connexion />]}></Route>
     <Route path="/inscription" element={[<HeaderSansConnexion/>, <InscriptionPopUp />]}></Route>
     <Route path="/posts" element={[<MenuNavigation/>, <Posts />]}></Route>
-
-
+    <Route path="/premiereConnexion" element={[<HeaderSansConnexion/>, <PremiereConnexion/>]}></Route>
+    <Route path="/politiqueConfidentialite" element={[<HeaderSansConnexion/>, <PolitiqueConfidentialite/>]}></Route>
+    <Route path="/conditionutilisation" element={[<HeaderSansConnexion/>, <ConditionUtilisation/>]}></Route>
     {/* <Route path="/profil/:id" element={<MenuNavigation /> <Profil />} /> */}
     {/* <Route path="/*" element={<NotFound />} /> */}
   </Routes>

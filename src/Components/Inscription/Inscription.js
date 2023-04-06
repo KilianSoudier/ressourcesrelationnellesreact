@@ -49,8 +49,6 @@ export default class Inscription extends React.Component {
         }
       
     });
-    console.log(document.getElementById("email1").value)
-    console.log(document.getElementById("password1").value)
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
@@ -74,35 +72,35 @@ export default class Inscription extends React.Component {
   render(){
     return (
       
-      <div className="flex flex-grow border-red flex-col gap-4 m-5">
+      <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div>
           <div className="mb-2 block">
             <label for="email1">Votre adresse mail :</label>
           </div>
-          <input id="email1" type="email" className='w-full rounded' placeholder="Votre adresse Email" required={true} />
+          <input id="email1" type="email" className='w-full mb-2 rounded' placeholder="Votre adresse Email" required={true} />
         </div>
         <div>
           <div className="mb-2 block">
             <label for="password1">Votre mot de passe :</label>
           </div>
-          <input id="password1"  type="password" className='w-full rounded' placeholder='Votre mot de passe' required={true}/>
+          <input id="password1"  type="password" className='w-full mb-2 rounded' placeholder='Votre mot de passe' required={true}/>
           <p id="msgPwd" class="hidden mt-2 text-xs text-green-600">Vos mots de passes sont bien identiques.</p>
         </div>
         <div>
           <div className="mb-2 block">
             <label for="password1">Confirmez votre mot de passe :</label>
           </div>
-          <input id="password2" onKeyUp={this.verifMdp} type="password" className='w-full rounded' placeholder='Confirmez votre mot de passe' required={true}/>
+          <input id="password2" onKeyUp={this.verifMdp} type="password" className='w-full mb-2 rounded' placeholder='Confirmez votre mot de passe' required={true}/>
           <p id="msgPwd" class="hidden mt-2 text-xs text-green-600">Vos mots de passes sont bien identiques.</p>
   
         </div>
-        <div id="msg_info" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert"></div>
-        <button disabled="" onClick={this.inscription} id="inscrire" className="bg-blue-500 shadow active:bg-blue-700 hover:bg-blue-600 my-2 disabled:bg-blue-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
+        <div id="msg_info" class="hidden p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert"></div>
+        <button disabled="" onClick={this.inscription} id="inscrire" className="w-full bg-blue-500 shadow active:bg-blue-700 hover:bg-blue-600 my-2 disabled:bg-blue-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
             S'inscrire
           </button>
         <div>
         <Link to="/connexion">
-          <button className="bg-blue-500 shadow active:bg-blue-700 hover:bg-blue-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Vous avez déjà un compte ? Connectez vous</button>
+          <button className="bg-blue-500 w-full shadow active:bg-blue-700 hover:bg-blue-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Vous avez déjà un compte ? Connectez vous</button>
         </Link>
         </div>
   
