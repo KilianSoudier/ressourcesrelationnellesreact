@@ -9,8 +9,10 @@ import HeaderSansConnexion from './Components/HeaderSansConnexion/HeaderSansConn
 import InscriptionPopUp from './Components/Inscription/Inscription';
 import PremiereConnexion from './Components/PremiereConnexion/PremiereConnexion';
 import PolitiqueConfidentialite from './Components/PolitiqueConfidentialite/PolitiqueConfidentialite';
+import PosterPost from './Components/PosterPost/PosterPost';
 import Posts from './Components/Posts/Posts';
 import ConditionUtilisation from './Components/ConditionUtilisation/ConditionUtilisation';
+import FiltrerCategPost from './Components/FiltrerCategPost/FiltrerCategPost';
 
 
 export default function App() {
@@ -19,7 +21,7 @@ export default function App() {
     <Route path="/" element={[<HeaderSansConnexion/>, <PageAccueil />]}></Route>
     <Route path="/connexion" element={[<HeaderSansConnexion/>, <Connexion />]}></Route>
     <Route path="/inscription" element={[<HeaderSansConnexion/>, <InscriptionPopUp />]}></Route>
-    <Route path="/posts" element={[<MenuNavigation/>, <Posts />]}></Route>
+    <Route path="/posts" element={[<MenuNavigation/>,<PosterPost/>, <FiltrerCategPost />, <Posts />]}></Route>
     <Route path="/premiereConnexion" element={[<HeaderSansConnexion/>, <PremiereConnexion/>]}></Route>
     <Route path="/politiqueConfidentialite" element={[<HeaderSansConnexion/>, <PolitiqueConfidentialite/>]}></Route>
     <Route path="/conditionutilisation" element={[<HeaderSansConnexion/>, <ConditionUtilisation/>]}></Route>

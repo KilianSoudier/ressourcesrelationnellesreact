@@ -27,7 +27,7 @@ export default class Connexion extends Component {
       {
         result = JSON.parse(result)
         const cookies = new Cookies();
-        
+        cookies.set("ResRelConId", result.id_user)
         cookies.set('ResRelLangue', result.langue);
         
           if(result.nom ==="string"){
