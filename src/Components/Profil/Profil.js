@@ -1,11 +1,13 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-
-export default function Profil() {
-  const params = useParams()
-  console.log(params)
-
-  return (
-    <div>Profil { params.id }</div>
-  )
+import { Component } from "react";
+  
+export default class Profil extends Component{
+  render(){
+    
+    return(
+      <>
+        <h1>profil de Kilian</h1>
+      </>
+    );
+  }
 }

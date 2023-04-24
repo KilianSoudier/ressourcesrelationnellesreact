@@ -1,7 +1,7 @@
 import './App.css';
 import MenuNavigation from './Components/NavBar/MenuNavigation';
 import "./tailwind.css"
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import React from 'react';
 import PageAccueil from './Components/PageAccueil/PageAccueil';
 import Connexion from './Components/Connexion/Connexion';
@@ -13,10 +13,11 @@ import PosterPost from './Components/PosterPost/PosterPost';
 import Posts from './Components/Posts/Posts';
 import ConditionUtilisation from './Components/ConditionUtilisation/ConditionUtilisation';
 import FiltrerCategPost from './Components/FiltrerCategPost/FiltrerCategPost';
-
+import Profil from './Components/Profil/Profil';
 
 export default function App() {
   return (
+    
   <Routes>
     <Route path="/" element={[<HeaderSansConnexion/>, <PageAccueil />]}></Route>
     <Route path="/connexion" element={[<HeaderSansConnexion/>, <Connexion />]}></Route>
@@ -25,7 +26,7 @@ export default function App() {
     <Route path="/premiereConnexion" element={[<HeaderSansConnexion/>, <PremiereConnexion/>]}></Route>
     <Route path="/politiqueConfidentialite" element={[<HeaderSansConnexion/>, <PolitiqueConfidentialite/>]}></Route>
     <Route path="/conditionutilisation" element={[<HeaderSansConnexion/>, <ConditionUtilisation/>]}></Route>
-    {/* <Route path="/profil/:id" element={<MenuNavigation /> <Profil />} /> */}
+    <Route path="/profil" element={[<MenuNavigation />, <Profil />]} />
     {/* <Route path="/*" element={<NotFound />} /> */}
   </Routes>
   )  

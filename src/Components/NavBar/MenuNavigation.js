@@ -19,7 +19,7 @@ class MenuNavigation extends React.Component{
     render(){
         return (
             //<!-- Barre de navigation -->
-            <nav class="bg-blue-700">
+            <nav class="bg-teal-500">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
               {/* //<!-- Logo --> */}
@@ -60,10 +60,10 @@ class MenuNavigation extends React.Component{
                 {/* //<!-- Menu principal pour les écrans larges --> */}
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
-                    <Link to={"/profil"} class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</Link>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">A propos</a>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <Link to={"/profil"} class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mon Profil</Link>
+                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">A propos</a>
+                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 </div>
@@ -71,10 +71,10 @@ class MenuNavigation extends React.Component{
             {/* //<!-- Menu déroulant pour les petits écrans --> */}
             <div class="sm:hidden hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/profil/Kilian" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">A propos</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="/profil" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mon Profil</a>
+                <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">A propos</a>
+        <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+        <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
         </div>
     </div>
     </nav>

@@ -77,13 +77,13 @@ export default class Inscription extends React.Component {
           <div className="mb-2 block">
             <label for="email1">Votre adresse mail :</label>
           </div>
-          <input id="email1" type="email" className='w-full mb-2 rounded' placeholder="Votre adresse Email" required={true} />
+          <input id="email1" type="email" className='w-full focus:ring-teal-500 focus:border-teal-500 mb-2 rounded' placeholder="Votre adresse Email" required={true} />
         </div>
         <div>
           <div className="mb-2 block">
             <label for="password1">Votre mot de passe :</label>
           </div>
-          <input id="password1"  type="password" className='w-full mb-2 rounded' placeholder='Votre mot de passe' required={true}/>
+          <input id="password1"  type="password" className='w-full focus:ring-teal-500 focus:border-teal-500 mb-2 rounded' placeholder='Votre mot de passe' required={true}/>
           <p id="msgPwd" class="hidden mt-2 text-xs text-green-600">Vos mots de passes sont bien identiques.</p>
         </div>
         <div>
@@ -91,16 +91,16 @@ export default class Inscription extends React.Component {
             <label for="password1">Confirmez votre mot de passe :</label>
           </div>
           <input id="password2" onKeyUp={this.verifMdp} type="password" className='w-full mb-2 rounded' placeholder='Confirmez votre mot de passe' required={true}/>
-          <p id="msgPwd" class="hidden mt-2 text-xs text-green-600">Vos mots de passes sont bien identiques.</p>
+          <p id="msgPwd" class="hidden mt-2 focus:ring-teal-500 focus:border-teal-500 text-xs text-green-600">Vos mots de passes sont bien identiques.</p>
   
         </div>
         <div id="msg_info" class="hidden p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert"></div>
-        <button disabled="" onClick={this.inscription} id="inscrire" className="w-full bg-blue-500 shadow active:bg-blue-700 hover:bg-blue-600 my-2 disabled:bg-blue-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
+        <button disabled="" onClick={this.inscription} id="inscrire" className="w-full bg-teal-500 shadow active:bg-teal-700 hover:bg-teal-600 my-2 disabled:bg-blue-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
             S'inscrire
           </button>
         <div>
         <Link to="/connexion">
-          <button className="bg-blue-500 w-full shadow active:bg-blue-700 hover:bg-blue-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Vous avez déjà un compte ? Connectez vous</button>
+          <button className="bg-teal-500 w-full shadow active:bg-teal-700 hover:bg-teal-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Vous avez déjà un compte ? Connectez vous</button>
         </Link>
         </div>
   

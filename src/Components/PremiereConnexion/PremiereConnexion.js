@@ -175,48 +175,48 @@ export default class PremiereConnexion extends Component {
           <label for="nom">
             Nom <span className='text-lg text-red-600'><b>*</b></span>
           </label>
-          <input required={true} className='w-full mb-2 rounded' id="nom" type="text" value={this.state.nom.value} onChange={this.handleChangeNom} placeholder="Entrez votre nom"/>
+          <input required={true} className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' id="nom" type="text" value={this.state.nom.value} onChange={this.handleChangeNom} placeholder="Entrez votre nom"/>
         </div>
         <div className="mb-2 block">
           <label for="prenom">
             Prénom <span className='text-lg text-red-600'><b>*</b></span>
           </label>
-          <input required={true} className='w-full mb-2 rounded' id="prenom" type="text" value={this.state.prenom.value} onChange={this.handleChangePrenom} placeholder="Entrez votre prénom" />
+          <input required={true} className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' id="prenom" type="text" value={this.state.prenom.value} onChange={this.handleChangePrenom} placeholder="Entrez votre prénom" />
         </div>
         <div className="mb-2 block">
           <label for="nom-jeune-fille">
             Nom de jeune fille
           </label>
-          <input className='w-full mb-2 rounded' id="nom-jeune-fille" type="text" value={this.state.nom_jeune_fille.value} onChange={this.handleChangeNomJeuneFille} placeholder="Entrez votre nom de jeune fille"/>
+          <input className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' id="nom-jeune-fille" type="text" value={this.state.nom_jeune_fille.value} onChange={this.handleChangeNomJeuneFille} placeholder="Entrez votre nom de jeune fille"/>
         </div>
         <div className="mb-2 block">
           <label for="pseudo">
             Pseudo
           </label>
-          <input className='w-full mb-2 rounded' id="pseudo" type="text" value={this.state.pseudo.value} onChange={this.handleChangePseudo} placeholder="Entrez votre pseudo" />
+          <input className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' id="pseudo" type="text" value={this.state.pseudo.value} onChange={this.handleChangePseudo} placeholder="Entrez votre pseudo" />
         </div>
         <div className="mb-2 block">
           <label for="ddn">
             Date de naissance <span className='text-lg text-red-600'><b>*</b></span>
           </label>
-          <input required={true} className='w-full mb-2 rounded' id="ddn" type="date" value={this.state.ddn.value} onChange={this.handleChangeddn} placeholder="Entrez votre Date de naissance" />
+          <input required={true} className='w-full focus:ring-teal-500 focus:border-teal-500 mb-2 rounded' id="ddn" type="date" value={this.state.ddn.value} onChange={this.handleChangeddn} placeholder="Entrez votre Date de naissance" />
         </div>
         <div className="mb-2 block">
           <label for="tel">
             Numéro de téléphone
           </label>
-          <input className='w-full mb-2 rounded' id="tel" type="text" value={this.state.tel.value} onChange={this.handleChangeTel} placeholder="Entrez votre numéro de téléphone" />
+          <input className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' id="tel" type="text" value={this.state.tel.value} onChange={this.handleChangeTel} placeholder="Entrez votre numéro de téléphone" />
         </div>
         <div className="mb-2 block">
-          <input id="conditions" required={true} value={this.state.conditions} onChange={this.handleChangeConditions} class="mr-5 w-4 h-4 text-blue-600 bg-gray-200 border-gray-400 rounded focus:ring-blue-500" type="checkbox"></input> <label for="conditions">Accepter nos <a href="/conditionutilisation" class="text-blue-600 hover:underline" target='_blank'>Conditions d'utilisation des données personnelles</a> <span className='text-lg text-red-600'><b>*</b></span></label>
+          <input id="conditions" required={true} value={this.state.conditions} onChange={this.handleChangeConditions} class="mr-5 w-4 h-4 text-teal-600 bg-gray-200 border-gray-400 rounded focus:ring-teal-500 focus:border-teal-500" type="checkbox"></input> <label for="conditions">Accepter nos <a href="/conditionutilisation" className="text-teal-600 hover:underline" target='_blank'>Conditions d'utilisation des données personnelles</a> <span className='text-lg text-red-600'><b>*</b></span></label>
         </div>
         <div className="mb-2 block">
-          <input id="rgpd" required={true} value={this.state.rgpd} onChange={this.handleChangeRGPD} class="mr-5 w-4 h-4 text-blue-600 bg-gray-200 border-gray-400 rounded focus:ring-blue-500" type="checkbox"></input> <label for="rgpd">Accepter notre <a href="/politiqueConfidentialite" class="text-blue-600 hover:underline" target='_blank'>Politique de confidentialité</a> <span className='text-lg text-red-600'><b>*</b></span></label>
+          <input id="rgpd" required={true} value={this.state.rgpd} onChange={this.handleChangeRGPD} class="mr-5 w-4 h-4 text-teal-600 bg-gray-200 border-gray-400 rounded focus:ring-teal-500" type="checkbox"></input> <label for="rgpd">Accepter notre <a href="/politiqueConfidentialite" class="text-teal-600 hover:underline" target='_blank'>Politique de confidentialité</a> <span className='text-lg text-red-600'><b>*</b></span></label>
         </div>
         <div><span className='text-lg mb-2 text-red-600'><b>*</b></span> : Champs obligatoires</div>
         <div id="msg_info" className="hidden p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert"></div>
         <div className="flex items-center justify-center">
-          <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button className="bg-teal-500 w-full hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             Valider
           </button>
         </div>

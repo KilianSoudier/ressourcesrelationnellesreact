@@ -29,13 +29,19 @@ export default class Connexion extends Component {
         const cookies = new Cookies();
         cookies.set("ResRelConId", result.id_user)
         cookies.set('ResRelLangue', result.langue);
-        
+        if(result != undefined){
           if(result.nom ==="string"){
             window.location.href = "/premiereConnexion"
           }
           else{
             window.location.href = "/posts"
           }
+        }
+        else{
+          var msg = document.getElementById("msg_info")
+          msg.className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"
+          msg.innerHTML="<span class=\"font-medium\">Connexion refusée !</span> Vos informations de connexion sont incorrectes."
+        }
       })
       .catch(error => {
         var msg = document.getElementById("msg_info")
@@ -52,21 +58,21 @@ export default class Connexion extends Component {
     <div className="mb-2 block">
       <label for="email1">Votre adresse mail :</label>
     </div>
-    <input id="email1" type="email" className='w-full mb-2 rounded' placeholder="Votre adresse Email" required={true} />
+    <input id="email1" type="email" className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' placeholder="Votre adresse Email" required={true} />
   </div>
   <div>
     <div className="mb-2 block">
       <label for="password1">Votre mot de passe :</label>
     </div>
-    <input id="password1" type="password" className='w-full mb-2 rounded' placeholder='Votre mot de passe' required={true}/>
+    <input id="password1" type="password" className='w-full mb-2 focus:ring-teal-500 focus:border-teal-500 rounded' placeholder='Votre mot de passe' required={true}/>
   </div>
   <div id="msg_info" className="hidden p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert"></div>
-  <button onClick={this.connexion} className="bg-blue-500 w-full shadow active:bg-blue-700 hover:bg-blue-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
+  <button onClick={this.connexion} className="bg-teal-500 w-full shadow active:bg-teal-700 hover:bg-teal-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
       Se connecter
   </button>
   <div>
     <Link to="/inscription">
-      <button className="bg-blue-500 shadow w-full focus:bg-blue-700 hover:bg-blue-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Pas de compte ? Inscrivez-vous maintenant</button>
+      <button className="bg-teal-500 shadow w-full focus:bg-teal-700 hover:bg-teal-600 my-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Pas de compte ? Inscrivez-vous maintenant</button>
     </Link>
   </div>
 </div>

@@ -131,13 +131,13 @@ export default class PosterPost extends Component{
         var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    };
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
     
-    fetch("http://localhost:5083/api/Categorie_Ressource", requestOptions)      
+      fetch("http://localhost:5083/api/Categorie_Ressource", requestOptions)      
       .then(response => response.text())
       .then(result => 
       {
@@ -151,9 +151,7 @@ export default class PosterPost extends Component{
         });
       })
       .catch(error => {
-        var msg = document.getElementById("msg_info")
-        msg.className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"
-        msg.innerHTML="<span class=\"font-medium\">Connexion refusée !</span> Vos informations de connexion sont incorrectes."
+        alert("Erreur sur l'affectation à une catégorie du post. Si le problème persiste, merci de nous contacter pour signaler le problème.")
       });
         
         
@@ -164,7 +162,6 @@ export default class PosterPost extends Component{
       if(document.getElementById("title").value!==""){
           if(cacherPoster.classList[0]==="hidden"){
               cacherPoster.classList.remove("hidden")
-
           }
       }
       else{
@@ -186,24 +183,24 @@ export default class PosterPost extends Component{
           <label className="block text-gray-700 font-bold mb-2" for="title">
               Titre
           </label>
-          <input onKeyUp={this.AfficherAjoutPost} value={this.state.titre} onChange={this.handleChangeTitre} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Entrez le titre du post" name="title" required />
+          <input onKeyUp={this.AfficherAjoutPost} value={this.state.titre} onChange={this.handleChangeTitre} className="shadow appearance-none focus:ring-teal-500 focus:border-teal-500 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Entrez le titre du post" name="title" required />
           </div>
           <div id="cacherPoster" className="hidden">
               <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2" for="content">
                   Contenu
               </label>
-              <textarea value={this.state.description} onChange={this.handleChangeDesc} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="content" placeholder="Entrez le contenu du post" name="content" required></textarea>
+              <textarea value={this.state.description} onChange={this.handleChangeDesc} className="shadow appearance-none border rounded focus:ring-teal-500 focus:border-teal-500 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="content" placeholder="Entrez le contenu du post" name="content" required></textarea>
               </div>
               <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2" for="file_input">
                   Joindre un fichier (optionnel)
               </label>
-              <input className="block w-full text-sm text-gray-500 accent-blue-500 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 last:focus:outline-none" id="file_input" type="file"/>
+              <input className="block w-full text-sm text-gray-500 accent-teal-500 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 last:focus:outline-none" id="file_input" type="file"/>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2">Choississez le type de ressource :</label>
-                <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" id="type">
+                <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5" id="type">
                     <option value="text">Texte</option>
                     <option value="image">Image</option>
                     <option value="video">Vidéo</option>
@@ -211,18 +208,18 @@ export default class PosterPost extends Component{
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2" for="categorieRessource"> Choississez une catégorie pour cette ressource :
-                    <select onClick={this.ChargerCategoriesRessources} onChange={this.handleChangeCateg} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" id="categorieRessource"></select>
+                    <select onClick={this.ChargerCategoriesRessources} onChange={this.handleChangeCateg} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5" id="categorieRessource"></select>
                 </label>
               </div>
               <div className="mb-4">
                 <label for="age_minimum" className="block text-gray-700 font-bold mb-2">
-                <input id="age_minimum" value={this.state.age_minimum} onChange={this.handleChangeAge} class="mr-5 w-4 h-4 text-blue-600 bg-gray-200 border-gray-400 rounded focus:ring-blue-500" type="checkbox"></input>
+                <input id="age_minimum" value={this.state.age_minimum} onChange={this.handleChangeAge} class="mr-5 w-4 h-4 text-teal-600 bg-gray-200 border-gray-400 rounded focus:ring-teal-500" type="checkbox"></input>
                     Adapté aux enfants (jusqu'à 18 ans) ?  
                 </label>
               </div>
               <div className="flex items-center justify-center">
                 <div id="msg_info"></div>
-              <button onClick={ this.handleSubmit } className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              <button onClick={ this.handleSubmit } className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                   Publier
               </button>
               </div>
