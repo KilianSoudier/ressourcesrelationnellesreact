@@ -24,12 +24,12 @@ class MenuNavigation extends React.Component{
                 <div class="relative flex items-center justify-between h-16">
               {/* //<!-- Logo --> */}
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="/posts" class="text-white text-xl font-bold"><img className="w-20" src={require("../Assets/logo.png")} /></a>
+                    <a href="/posts" class="text-white text-xl font-bold"><img className="w-20" alt="Ressources Relationnelles" src={require("../Assets/logo.png")} /></a>
                 </div>
                 {/* //<!-- Menu hamburger pour les petits écrans --> */}
                 <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     {/* bouton notifications */}
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-teal-700 focus:outline-none focus:bg-teal-700 focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Ouvrir le menu</span>
 
                     {/* //<!-- icône cloche notification --> */}
@@ -45,7 +45,7 @@ class MenuNavigation extends React.Component{
                     </button>
 
                     {/* bouton hamburger */}
-                    <button onClick={this.toggleMenu} type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button onClick={this.toggleMenu} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-teal-700 focus:outline-none focus:bg-teal-700 focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Ouvrir le menu</span>
                         {/* //<!-- icône du menu hamburger --> */}
                         <svg class="block text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -61,9 +61,9 @@ class MenuNavigation extends React.Component{
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                     <Link to={"/profil"} class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mon Profil</Link>
-                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">A propos</a>
-                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="/stats" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Statistiques</a>
+                    <a href="mailto:RessourcesRelationnellesSupport@mail.com
+            ?subject=Demande de support" class="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 </div>
@@ -71,10 +71,10 @@ class MenuNavigation extends React.Component{
             {/* //<!-- Menu déroulant pour les petits écrans --> */}
             <div class="sm:hidden hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/profil" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mon Profil</a>
-                <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">A propos</a>
-        <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-        <a href="#" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="/profil" class="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mon Profil</a>
+                <a href="/stats" class="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Statistiques</a>
+        <a href="mailto:RessourcesRelationnellesSupport@mail.com
+            ?subject=Demande de support" class="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
         </div>
     </div>
     </nav>

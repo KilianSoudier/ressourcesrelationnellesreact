@@ -14,6 +14,7 @@ import Posts from './Components/Posts/Posts';
 import ConditionUtilisation from './Components/ConditionUtilisation/ConditionUtilisation';
 import FiltrerCategPost from './Components/FiltrerCategPost/FiltrerCategPost';
 import Profil from './Components/Profil/Profil';
+import Stats from './Components/Stats/Stats';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
     <Route path="/politiqueConfidentialite" element={[<HeaderSansConnexion/>, <PolitiqueConfidentialite/>]}></Route>
     <Route path="/conditionutilisation" element={[<HeaderSansConnexion/>, <ConditionUtilisation/>]}></Route>
     <Route path="/profil" element={[<MenuNavigation />, <Profil />]} />
+    <Route path="/stats" element={[<MenuNavigation />, <Stats />]} />
     {/* <Route path="/*" element={<NotFound />} /> */}
   </Routes>
   )  

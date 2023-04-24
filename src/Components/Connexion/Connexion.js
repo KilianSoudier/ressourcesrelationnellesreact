@@ -29,7 +29,7 @@ export default class Connexion extends Component {
         const cookies = new Cookies();
         cookies.set("ResRelConId", result.id_user)
         cookies.set('ResRelLangue', result.langue);
-        if(result != undefined){
+        if(result !== undefined){
           if(result.nom ==="string"){
             window.location.href = "/premiereConnexion"
           }
