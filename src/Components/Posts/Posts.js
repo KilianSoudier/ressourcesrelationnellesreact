@@ -19,7 +19,7 @@ export default class Posts extends Component {
                     div.innerHTML+='<div class="max-w-6xl mx-auto px-4 py-8">'+
                     '<div class="space-y-8">'+
                     '<div class="bg-white shadow-md rounded-lg overflow-hidden">'+
-                    '<div class="w-full h-12 bg-teal-600">'+
+                    '<div class="w-full h-12 bg-teal-500">'+
                     '</div>'+
                     '<div class="p-4">'+
                     '<span class="inline-block bg-teal-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#catégories</span>'+
