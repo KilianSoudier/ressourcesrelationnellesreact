@@ -83,6 +83,8 @@ export default class Profil extends Component{
           this.setState({dateNaiss : result.date_naissance})
           this.setState({email : result.email})
           this.setState({tel : result.numero_telephone})
+          this.setState({pseudo : result.pseudo})
+
         })
         .catch(error => {
           console.log(error)
