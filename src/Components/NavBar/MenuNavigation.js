@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom";
-
+import Cookies from 'universal-cookie';
 
 
 class MenuNavigation extends React.Component{
@@ -13,6 +13,11 @@ class MenuNavigation extends React.Component{
         else{
             menuPetit.classList.add("hidden")
         }
+    }
+    deconnexion(){
+        const cookies = new Cookies();
+        cookies.remove("ResRelConId")
+        window.location.href = "/"
     }
 
     render(){
@@ -62,7 +67,9 @@ class MenuNavigation extends React.Component{
                     <Link to={"/profil"} className="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mon Profil</Link>
                     <a href="/stats" className="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Statistiques</a>
                     <a href="mailto:RessourcesRelationnellesSupport@mail.com
-            ?subject=Demande de support" className="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    ?subject=Demande de support" className="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a className="text-white hover:bg-teal-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={this.deconnexion}>Déconnexion</a>
+                    
                     </div>
                 </div>
                 </div>
@@ -72,8 +79,9 @@ class MenuNavigation extends React.Component{
                 <div className="px-2 pt-2 pb-3 space-y-1">
                 <a href="/profil" className="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mon Profil</a>
                 <a href="/stats" className="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Statistiques</a>
-        <a href="mailto:RessourcesRelationnellesSupport@mail.com
-            ?subject=Demande de support" className="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a className="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={this.deconnexion}>Déconnexion</a>
+                <a href="mailto:RessourcesRelationnellesSupport@mail.com
+                ?subject=Demande de support" className="text-white hover:bg-teal-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
         </div>
     </div>
     </nav>
