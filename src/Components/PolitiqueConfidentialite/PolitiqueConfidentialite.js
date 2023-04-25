@@ -19,7 +19,8 @@ export default class PolitiqueConfidentialite extends Component{
                 <h2 className="text-xl font-bold mb-2">6. Modifications de la politique</h2>
                 <p className="mb-4">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment et nous vous encourageons à la consulter régulièrement. Les modifications entreront en vigueur dès leur publication sur notre site web.</p>
                 <h2 className="text-xl font-bold mb-2">7. Contactez-nous</h2>
-                <p className="mb-4">Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez nous contacter à l'adresse électronique suivante : <a className="text-blue-600 hover:underline" href="mailto:privacy@government-social-network.com">privacy@government-social-network.com</a></p>
+                <p className="mb-4">Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez nous contacter à l'adresse électronique suivante : <a href="mailto:RessourcesRelationnellesSupport@mail.com
+            ?subject=Demande de support" class="text-blue-600 hover:underline">RessourcesRelationnellesSupport@mail.com</a></p>
                 <p className="text-sm text-gray-600">Dernière mise à jour : Avril 2023</p>
             </div>
         )
