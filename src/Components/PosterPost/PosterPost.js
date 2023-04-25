@@ -113,9 +113,6 @@ export default class PosterPost extends Component{
       catch(e){
         alert("Une erreur est survenue ! Veuillez réessayer !")  
       }
-
-
-      
     }
     verifcookie(){
       const cookies = new Cookies();
@@ -213,7 +210,7 @@ export default class PosterPost extends Component{
               </div>
               <div className="mb-4">
                 <label for="age_minimum" className="block text-gray-700 font-bold mb-2">
-                <input id="age_minimum" value={this.state.age_minimum} onChange={this.handleChangeAge} class="mr-5 w-4 h-4 text-teal-600 bg-gray-200 border-gray-400 rounded focus:ring-teal-500" type="checkbox"></input>
+                <input id="age_minimum" value={this.state.age_minimum} onChange={this.handleChangeAge} className="mr-5 w-4 h-4 text-teal-600 bg-gray-200 border-gray-400 rounded focus:ring-teal-500" type="checkbox"></input>
                     Adapté aux enfants (jusqu'à 18 ans) ?  
                 </label>
               </div>

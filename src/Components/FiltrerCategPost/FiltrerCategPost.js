@@ -37,7 +37,6 @@ export default class FiltrerCategPost extends Component{
         });
       })
       .catch(error => {
-        console.log(error)
         alert("Erreur lors du chargement des catégories du filtre, veuillez recharger la page, si le problème persiste, merci de nous contacter.")
       });
     }
@@ -45,14 +44,14 @@ export default class FiltrerCategPost extends Component{
     render(){
         return(
             <center className="max-w-6xl mx-auto px-4 py-8">
-            <button onClick={this.toggleFiltre} class="bg-teal-600 mb-5 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded flex items-center">
-                <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <button onClick={this.toggleFiltre} className="bg-teal-600 mb-5 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded flex items-center">
+                <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h8a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1z" clip-rule="evenodd" />
                 </svg>
                 Filtrer
             </button>
             <div id="divfiltre" className='hidden'>
-                <select id="categories" onClick={ this.chargerCategories } class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5">
+                <select id="categories" onClick={ this.chargerCategories } className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5">
                     <option selected>Veuillez choisir la catégorie sur laquelle vous souhaitez filtrer les ressources.</option>
                 </select>
             </div>

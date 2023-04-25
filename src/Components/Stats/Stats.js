@@ -29,7 +29,6 @@ export default class Stats extends Component{
       document.getElementById("thead").classList.remove("hidden")
       result = JSON.parse(result)
       const objetsTries = result.sort((a, b) => a.compteur_vues - b.compteur_vues)
-      console.log(objetsTries)
 
       for(var i = 0; i< objetsTries.length; i++){
         contenuTableau.innerHTML+='<tr class="bg-white border-b">'+
@@ -46,7 +45,6 @@ export default class Stats extends Component{
       }
     })
     .catch(error => {
-        console.log(error)
       alert("Une erreur est survenue, veuillez recharger la page, si le problème persiste, merci de nous contacter pour nous signaler le problème.")
     });
     };
@@ -69,7 +67,6 @@ export default class Stats extends Component{
           document.getElementById("thead").classList.remove("hidden")
           result = JSON.parse(result)
           const objetsTries = result.sort((a, b) => b.compteur_vues - a.compteur_vues)
-          console.log(objetsTries)
     
           for(var i = 0; i< objetsTries.length; i++){
             contenuTableau.innerHTML+='<tr class="bg-white border-b">'+
@@ -86,7 +83,6 @@ export default class Stats extends Component{
           }
         })
         .catch(error => {
-            console.log(error)
           alert("Une erreur est survenue, veuillez recharger la page, si le problème persiste, merci de nous contacter pour nous signaler le problème.")
         });
     };
@@ -96,24 +92,24 @@ export default class Stats extends Component{
     return(
       <>
           <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table class="w-full text-sm text-left text-gray-500">
-                    <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white">
+            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table className="w-full text-sm text-left text-gray-500">
+                    <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white">
                         Nombre de vues par ressources :
-                        <p class="mt-1 text-sm font-normal text-gray-500">
+                        <p className="mt-1 text-sm font-normal text-gray-500">
                             <button className='bg-teal-600 w-full mb-5 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded flex items-center' onClick={this.chargerCompteurVueRessourcesCroissant}>Trier par ordre croissant</button>
                             <button className='bg-teal-600 w-full mb-5 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded flex items-center' onClick={this.chargerCompteurVueRessourcesDecroissant}>Trier par ordre Décroissant</button>
                         </p>
                     </caption>
-                    <thead id="thead" class="text-xs text-gray-700 uppercase bg-gray-50 hidden">
+                    <thead id="thead" className="text-xs text-gray-700 uppercase bg-gray-50 hidden">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" className="px-6 py-3">
                                 Titre
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" className="px-6 py-3">
                                 Contenu
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" className="px-6 py-3">
                                 Nombre de vues
                             </th>
                         </tr>
