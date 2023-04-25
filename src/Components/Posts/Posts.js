@@ -15,7 +15,7 @@ export default class Posts extends Component {
             result = JSON.parse(result)
             var div = document.getElementById("affichagePosts") 
             for(var i=0; i<result.length; i++){
-                if(i>0 && result[i].validation_moderation===1){
+                if(i>0 && result[i].validation_moderation===true){
                     div.innerHTML+='<div class="max-w-6xl mx-auto px-4 py-8">'+
                     '<div class="space-y-8">'+
                     '<div class="bg-white shadow-md rounded-lg overflow-hidden">'+
@@ -38,7 +38,7 @@ export default class Posts extends Component {
                     '</div>'
                 }
                 else{
-                    if(result[i].validation_moderation===1){
+                    if(result[i].validation_moderation===true){
                         div.innerHTML='<div class="max-w-6xl mx-auto px-4 py-8">'+
                         '<div class="space-y-8">'+
                         '<div class="bg-white shadow-md rounded-lg overflow-hidden">'+
